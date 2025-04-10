@@ -1,6 +1,7 @@
 package com.buthdev.desafio_itau.model;
 
 import java.time.OffsetDateTime;
+import java.util.Objects;
 
 public class Transaction {
 	
@@ -30,5 +31,22 @@ public class Transaction {
 
 	public void setDateHour(OffsetDateTime dateHour) {
 		this.dateHour = dateHour;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(dateHour, value);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Transaction other = (Transaction) obj;
+		return Objects.equals(dateHour, other.dateHour) && Objects.equals(value, other.value);
 	}
 }

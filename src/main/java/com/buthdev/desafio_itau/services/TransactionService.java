@@ -15,4 +15,8 @@ public class TransactionService {
 	public void createTransaction(Transaction transaction) {
 		list.add(transaction);
 	}
+	
+	public void clearTransactions() {
+		list.clear();
+	}
 }
