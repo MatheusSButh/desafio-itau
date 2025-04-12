@@ -1,7 +1,6 @@
 package com.buthdev.desafio_itau.resources;
 
 import java.time.OffsetDateTime;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,7 +15,7 @@ import com.buthdev.desafio_itau.model.Transaction;
 import com.buthdev.desafio_itau.services.TransactionService;
 
 @RestController
-@RequestMapping(value = "transacao")
+@RequestMapping(value = "/transacao")
 public class TransactionResource {
 	
 	@Autowired

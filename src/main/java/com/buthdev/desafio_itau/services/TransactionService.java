@@ -1,6 +1,7 @@
 package com.buthdev.desafio_itau.services;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -19,4 +20,8 @@ public class TransactionService {
 	public void clearTransactions() {
 		list.clear();
 	}
+	
+	public List<Transaction> getAllTransactions() {
+        return Collections.unmodifiableList(list); 
+    }
 }
